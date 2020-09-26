@@ -4,4 +4,4 @@
  * to your EJS files and used there.
  ****************************************************/
 
- app.use(express.static('public'));
+ // app.use(express.static('public'));

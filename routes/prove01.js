@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get('/',(req, res, next) => {
     res.render('pages/prove01/form', { 
-        title: 'Prove Assignment 01', 
+        title: 'Prove Assignment 02', 
         path: '/prove01', // For pug, EJS 
         activeTA03: true, // For HBS
         contentCSS: true, // For HBS
@@ -12,12 +12,14 @@ router.get('/',(req, res, next) => {
 
 router.post('/submit',(req, res, next) => {
     res.render('pages/prove01/display', { 
-        title: 'Prove Assignment 01', 
+        title: 'Prove Assignment 02', 
         path: '/prove01', // For pug, EJS 
         activeTA03: true, // For HBS
         contentCSS: true, // For HBS
-        i1: req.body.input1,
-        i2: req.body.input2,
+        title: req.body.title,
+        summary: req.body.summary,
+        date: req.body.date,
+        authorName: req.body.authorName,
     });
 });
 
