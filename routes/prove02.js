@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 router.get('/',(req, res, next) => {
     res.render('pages/prove02/form', { 
-        
     });
+    return res.end();
 });
 
 router.post('/submit',(req, res, next) => {
@@ -13,7 +13,7 @@ router.post('/submit',(req, res, next) => {
         date: req.body.date,
         authorName: req.body.authorName,
     });
-    res.redirect('pages/prove02/form.ejs');
+    res.redirect('pages/prove02/form');
 });
 
 
