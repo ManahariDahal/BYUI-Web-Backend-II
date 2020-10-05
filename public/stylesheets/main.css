@@ -1,3 +1,34 @@
+/* My own CSS because I am too lazy to include Bootstrap*/
+.button {
+  background-color: #a80000;
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main-border {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px 10px;
+}
+
+
+/* My own CSS because I am too lazy to include Bootstrap*/
+
+
+
 .jumbotron {
   background: #0065BD;
   color: white;

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../../includes/header.ejs %>
+</head>
+
+<body>
+	<% include ../../includes/nav.ejs %>
+	  <div class = "text-center jumbotron .btn-primary">
+	  	<h2> Welcome to my movie list. Here are the list of the top 100 imdb movie lists. </h2>
+	  </div>
+
+	  <!-- forEach works best with array of items, also, I couldn't figure out other way to deal -->
+	  <% movie.forEach(list => { %>
+		<div class="text-center">
+		  <div class = "main-border">
+		  		<p><%= list.rank %></p>
+		    	<p><%= list.id %></p>
+		    	<h3><%= list.title %></h3> 
+		    	<button class="button" type="submit"> More Info </button>
+		    	<!-- <img src="<%= list.posterUrl %>" style='width: 200px; height=200px'> -->
+		  </div>
+		</div>
+	<% }) %>
+</body>
+</html>
