@@ -1,3 +1,8 @@
+/*******************************************************
+* FOR NOW THIS JS FILE IS NOT CONNECTED TO ANYTHING
+*********************************************************/
+
+
 // const express = require('express');
 const path = require('path');
 const fs = require('fs');
