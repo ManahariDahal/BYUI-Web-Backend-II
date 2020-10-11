@@ -66,7 +66,7 @@ const options = {
 };
 
 const MONGODB_URL = process.env.MONGODB_URL || 
-  "mongodb+srv://DatabaseUser:Kpme1cUVhMn10GmO@cluster0.me8xf.mongodb.net/<dbname>?retryWrites=true&w=majority";
+  "mongodb+srv://DatabaseUser:tBjzgjbgunetzQWr@cluster0.me8xf.mongodb.net/<dbname>?retryWrites=true&w=majority";
 
 /* Br. Birche's code */
 app.use(express.static(path.join(__dirname, 'public')))
@@ -98,9 +98,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 
-/*********************************************
-* THIS IS NOT WORKING FOR SOME REASON
-*******************************************/
+/*****************************************************
+* THIS IS NOT WORKING FOR SOME REASON IN HEROKU
+***************************************************/
 
 mongoose.connect(MONGODB_URL, options)
   .then(result => {
