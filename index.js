@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000 // So we can run on heroku || (OR) localho
 const app = express();
 
 /*********************************************
-* 
+* MONGOOSE
 *******************************************/
 const mongoose = require('mongoose');
 const errorController = require('./controllers/error');
