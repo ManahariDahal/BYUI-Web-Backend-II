@@ -66,7 +66,7 @@ const options = {
 };
 
 const MONGODB_URL = process.env.MONGODB_URL || 
-"mongodb+srv://DatabaseUser:tBjzgjbgunetzQWr@cluster0.me8xf.mongodb.net/test?retryWrites=true&w=majority";
+"mongodb+srv://DatabaseUser:tBjzgjbgunetzQWr@cluster0.me8xf.mongodb.net/<dbname>?retryWrites=true&w=majority";
 
 /* Br. Birche's code */
 app.use(express.static(path.join(__dirname, 'public')))
