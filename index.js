@@ -8,7 +8,6 @@ const csrf = require('csurf');
 const flash = require('connect-flash');
 const errorController = require('./controllers/error');
 const User = require('./models/user');
-
 const cors = require('cors');
 
 const MONGODB_URI = process.env.MONGODB_URI || 
@@ -38,6 +37,11 @@ app.set('views', 'views');
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 const authRoutes = require('./routes/auth');
+
+/*************************************************************************
+* PROVE 08
+*************************************************************************/
+const prove08Routes = require('./routes/prove08');
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -91,6 +95,11 @@ app.use((error, req, res, next) => {
   });
 });
 
+
+/*************************************************************************
+* PROVE 08
+*************************************************************************/
+app.use('/prove08', prove08Routes);
 
 mongoose
   .connect(MONGODB_URI)
