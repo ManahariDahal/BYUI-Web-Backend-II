@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Including the header ejs file -->
+    <% include ../../includes/header.ejs %>
+
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+	<% include ../../includes/nav.ejs %>
+		<% for (i = 0; i < data.length; i++) { %>
+	            <div>
+	                <h2><%= data[i].name %></h2>
+	                <p class="product__description"><%= data[i].url %></p>
+	            </div>
+    	<% } %>
+ 
+        <section class="pagination">
+        	<% if (hasNextPage) {%>
+                <a href="/prove09/next">next</a>
+            <% } %>
+
+            <% if (hasPreviousPage) {%>
+                <a href="/prove09/prev">previous</a>
+            <% } %>
+    	</section>
+<%- include('../../includes/end.ejs') %>

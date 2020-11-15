@@ -39,9 +39,10 @@ const shopRoutes = require('./routes/shop');
 const authRoutes = require('./routes/auth');
 
 /*************************************************************************
-* PROVE 08
+* PROVE 08 & 09
 *************************************************************************/
 const prove08Routes = require('./routes/prove08');
+const prove09Routes = require('./routes/prove09');
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -97,9 +98,10 @@ app.use((error, req, res, next) => {
 
 
 /*************************************************************************
-* PROVE 08
+* PROVE 08 & 09
 *************************************************************************/
 app.use('/prove08', prove08Routes);
+app.use('/prove09', prove09Routes);
 
 mongoose
   .connect(MONGODB_URI)
