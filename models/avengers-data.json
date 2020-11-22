@@ -1,0 +1,30 @@
+{
+    "avengers": 
+    [
+        {
+            "name": "Tony Stark",
+            "superheroname": "Iron Man"
+        },
+        {
+            "name": "Steve Rogers",
+            "superheroname": "Captain America"
+        },
+        {
+            "name": "Thor Odinson",
+            "superheroname": "Thor"
+        },
+        {
+            "name": "Bruce Banner",
+            "superheroname": "The Hulk"
+        },
+        {
+            "name": "Natasha Romanova",
+            "superheroname": "Black Widow"
+
+        },
+        {
+            "name": "Clint Barton",
+            "superhero-name": "Hawkeye"
+        }
+    ]
+}

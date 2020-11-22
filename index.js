@@ -39,10 +39,11 @@ const shopRoutes = require('./routes/shop');
 const authRoutes = require('./routes/auth');
 
 /*************************************************************************
-* PROVE 08 & 09
+* PROVE 08 & 09 & 10
 *************************************************************************/
 const prove08Routes = require('./routes/prove08');
 const prove09Routes = require('./routes/prove09');
+const prove10Routes = require('./routes/prove10');
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -98,15 +99,16 @@ app.use((error, req, res, next) => {
 
 
 /*************************************************************************
-* PROVE 08 & 09
+* PROVE 08 & 09 & 10
 *************************************************************************/
 app.use('/prove08', prove08Routes);
 app.use('/prove09', prove09Routes);
+app.use('/prove10', prove10Routes);
 
 mongoose
   .connect(MONGODB_URI)
   .then(result => {
-    app.listen(PORT);
+    app.listen(PORT, () => {console.log(`Listening on ${ PORT }`)});
   })
   .catch(err => {
     console.log(err);
