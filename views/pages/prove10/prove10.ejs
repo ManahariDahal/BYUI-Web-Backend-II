@@ -1,0 +1,23 @@
+<%- include('../../includes/header.ejs') %>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+
+<body>
+    <%- include('../../includes/nav.ejs') %>
+    <div class="centered">
+        <% for (let avenger of data.avengers) { %>
+            <h1><%= avenger.name %> </h1>
+            <h3><%= avenger.superheroname %> </h3>
+        <% } %>
+
+        <form action="prove10/insert" method="POST">
+            <input type="text" name="newavenger" placeholder="Summon your new Avenger">
+            <input type="text" name="superheroname" placeholder="What's his superhero name?">
+            <button> Add </button>
+        </form>
+    </div>
+
+
+</body>
+</html>

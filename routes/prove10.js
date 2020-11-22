@@ -5,7 +5,7 @@ const router = express.Router();
 const dummyData = require('../models/avengers-data.json')
 
 router.get('/', (req, res, next) => {
-    res.render('prove10', {
+    res.render('pages/prove10/prove10', {
         title: 'Prove10',
         path: '/prove10',
         data: dummyData
@@ -32,11 +32,11 @@ router.post('/insert', (req, res, next) => {
 
     if (existingAvenger === false)
     {
-        dummyData.avengers.push({name: name, superheroname: req.body.superheroname })
+        dummyData.avengers.push({name: newAvenger, superheroname: req.body.superheroname })
         console.log(dummyData);
     }
 
-    res.direct('/prove10');
+    res.redirect('/prove10');
 });
 
 module.exports = router;
