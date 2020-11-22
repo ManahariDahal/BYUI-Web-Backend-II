@@ -24,7 +24,7 @@
         },
         {
             "name": "Clint Barton",
-            "superhero-name": "Hawkeye"
+            "superheroname": "Hawkeye"
         }
     ]
 }
